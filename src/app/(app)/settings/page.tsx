@@ -1,0 +1,1 @@
+export default function Settings(){return <><span className="eyebrow">Conta e organização</span><h1>Configurações</h1><div className="card"><h2>Integrações necessárias</h2><p className="muted">Configure NEXT_PUBLIC_SUPABASE_URL e NEXT_PUBLIC_SUPABASE_ANON_KEY em .env.local. Nunca exponha a service role key no navegador.</p></div></>}

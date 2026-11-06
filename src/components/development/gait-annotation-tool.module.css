@@ -1,0 +1,31 @@
+.tool { width: 100%; max-width: 1080px; min-width: 0; padding: 16px; contain: inline-size; }
+.tool h1 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); margin: 4px 0; }
+.tool h2 { font-size: 1.1rem; margin: 12px 0 6px; }
+.tool p { margin: 8px 0; }
+.tool :global(.actions) { gap: 6px; margin-top: 8px; align-items: center; }
+.tool :global(.button) { padding: 8px 10px; min-height: 36px; gap: 5px; font-size: .85rem; }
+.tool :global(.button:disabled) { opacity: .5; cursor: default; }
+.tool :global(.label) { margin: 8px 0 4px; }
+.tool :global(.field) { min-width: 0; padding: 8px; }
+.tool :global(.notice) { padding: 10px; margin: 8px 0; }
+.identity :global(.field) { flex: 1 1 160px; max-width: 280px; }
+.video { display: block; width: 100%; height: clamp(180px, 36vh, 360px); object-fit: contain; background: #071d29; border-radius: 10px; }
+.transport { padding: 6px 0; }
+.time { font-size: .85rem; font-variant-numeric: tabular-nums; }
+.settings { display: grid; grid-template-columns: minmax(100px, 160px) minmax(160px, 240px); gap: 10px; }
+.settings select { display: block; margin-top: 4px; }
+.boundaries { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 12px 0; border: 1px solid var(--line); border-radius: 10px; padding: 10px; }
+.boundaries legend { font-weight: 700; font-size: .9rem; }
+.boundaries output { display: block; font-weight: 700; font-variant-numeric: tabular-nums; margin-top: 6px; }
+.boundaries :global(.field) { flex: 1 1 100px; width: 100px; }
+.boundaries p { grid-column: 1 / -1; font-size: .85rem; color: var(--muted); }
+.eventTable { max-width: 100%; overflow-x: auto; }
+.eventTable :global(.table) { min-width: 460px; }
+.eventTable th, .eventTable td { padding: 8px; }
+.eventTable input { max-width: 120px; }
+@media (max-width: 520px) {
+  .tool { padding: 10px; }
+  .settings { grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); }
+  .time { width: 100%; }
+  .boundaries { grid-template-columns: minmax(0, 1fr); }
+}

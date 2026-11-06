@@ -1,0 +1,2 @@
+import { describe,it,expect } from "vitest"; import { isSafePublicSupabaseKey } from "@/lib/supabase/browser";
+describe("configuração pública do Supabase",()=>{it("aceita chave publicável",()=>expect(isSafePublicSupabaseKey("sb_publishable_example")).toBe(true));it("recusa chaves secretas",()=>{expect(isSafePublicSupabaseKey("sb_secret_example")).toBe(false);expect(isSafePublicSupabaseKey("service_role_example")).toBe(false)});});
